@@ -1,3 +1,5 @@
+--CREATE DATABASE [usuarios-db];
+
 BEGIN TRANSACTION
 USE [usuarios-db];
 

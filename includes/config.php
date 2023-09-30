@@ -32,6 +32,8 @@ function connectDB($host){
 function syncDB() {
     global $connection1;
     global $connection2;
+    $sourceDb = null;
+    $targetDb = null;
     // No sincronizar si no hay otra BD disponible
     if (!$connection1 || !$connection2) return;
     try {
@@ -46,7 +48,7 @@ function syncDB() {
             $sourceDb = $connection1;
             $targetDb = $connection2;
         }else{
-            $msg = "SINCRONIZACIÓN ÉXITOSA: Base de datos local -> Base de datos principal"
+            $msg = "SINCRONIZACIÓN ÉXITOSA: Base de datos local -> Base de datos principal";
             $sourceDb = $connection2;
             $targetDb = $connection1;
         }

@@ -1,5 +1,6 @@
 <?php
 session_start();
+error_reporting(0);
 include('includes/config.php');
 if(isset($_POST['login'])){
 	$sql ="SELECT dni,clave,privilegios FROM usuarios WHERE dni=:v1 and clave=:v2";
