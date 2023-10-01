@@ -90,7 +90,7 @@ function syncDB() {
 }
 
 // Conectarse a cada BD
-$connection1 = connectDB("gestion-db.database.windows.net");
+$connection1 = connectDB("tcp:gestion-db.database.windows.net");
 $connection2 = connectDB("localhost");
 
 // Asignar la BD con la que se va a trabajar
